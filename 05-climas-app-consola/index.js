@@ -1,6 +1,9 @@
+require("dotenv").config();
+
 const { inquirerMenu, pausa, leerInput } = require("./helpers/inquirer");
 const Busquedas = require("./models/busquedas");
 
+console.log(process.env);
 const main = async () => {
   let opt = "";
 
@@ -37,4 +40,4 @@ const main = async () => {
     if (opt !== 0) await pausa();
   } while (opt !== 0);
 };
-main();
+// main();
